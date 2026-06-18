@@ -10,7 +10,17 @@ function App() {
     formState: { errors },
   } = useForm();
 
-  
+  async function nextStep() {
+    const isValid = await trigger([ 'name', 'email' ]);
+
+    if (isValid) {
+      setStep(2);
+    }
+  }
+
+  function prevStep() {
+    setStep(1);
+  }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-3xl font-bold">multi-page-portfolio</h1>
