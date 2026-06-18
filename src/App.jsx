@@ -50,6 +50,11 @@ function App() {
                 })}
                 className={`w-full p-2 border-2 rounded-md outline-none transition ${errors.name ? 'border-red-500' : 'border-gray-400'}`}
               />
+              {errors.name && (
+                <p className="mt-1 text-sm text-red-600 bg-red-50 border border-red-200 px-2 py-1 rounded-md">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
           </>
         )}
