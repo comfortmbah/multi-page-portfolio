@@ -26,10 +26,34 @@ function App() {
     console.log(data);
     alert('Form submitted successfully');
   }
-  
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-3xl font-bold">multi-page-portfolio</h1>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <form 
+        action="#"
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-white p-6 rounded-xl shadow-md w-full max-w-md space-y-4"
+      >
+        <h2 className="text-2xl font-bold text-center">
+          Step {step} of 2
+        </h2>
+
+        {/* Step 1 */}
+        {step === 1 && (
+          <>
+            <div>
+              <input 
+                type="text"
+                placeholder="Full Name" 
+                {...register("name", {
+                  required: 'Name is required',
+                })}
+                className={`w-full p-2 border-2 rounded-md outline-none transition ${errors.name ? 'border-red-500' : 'border-gray-400'}`}
+              />
+            </div>
+          </>
+        )}
+      </form>
     </div>
   );
 }
