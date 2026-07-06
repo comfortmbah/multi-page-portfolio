@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import Button from "../components/Button"
 
 const Home = () => {
   return (
@@ -26,18 +27,25 @@ const Home = () => {
           <div className="flex gap-4">
             <NavLink
               to={'/projects'}
-              className={'bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition'}
             >
-              View Projects
+              <Button
+                className="bg-blue-600 text-white hover:bg-blue-700"
+              >
+                View Projects
+              </Button>
             </NavLink>
 
             <a 
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="boder border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition"
+              
             >
-              Download Resume
+              <Button
+                className="boder border-blue-600 text-blue-600  hover:bg-blue-600 hover:text-white " 
+              >
+                Download Resume
+              </Button>
             </a>
           </div>
         </div>
