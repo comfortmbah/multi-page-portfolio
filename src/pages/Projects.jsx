@@ -1,10 +1,11 @@
 import projects from "../data/projects"
 import ProjectCard from '../components/ProjectCard'
 import SectionTitle from '../components/SectionTitle'
+import Container from '../components/Container'
 
 const Projects = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <Container>
       <SectionTitle
         title={'My Projects'}
         subtitle={"Here are some of the projects I've built."}
@@ -18,7 +19,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </section>
+    </Container>
   )
 }
 

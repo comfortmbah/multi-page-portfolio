@@ -1,10 +1,11 @@
 import SectionTitle from '../components/SectionTitle';
 import SkillCard from '../components/SkillCard';
 import skills from '../data/skills'
+import Container from '../components/Container'
 
 const Skills = () => {
   return (
-    <section className='max-w-7xl mx-auto px-6 py-16'>
+    <Container>
       <SectionTitle
         title={'My Skills'}
         subtitle={'Technologies and tools I use.'}
@@ -18,7 +19,7 @@ const Skills = () => {
           />
         ))}
       </div>
-    </section>
+    </Container>
   )
 }
 

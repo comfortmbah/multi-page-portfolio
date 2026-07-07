@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Button from "../components/Button"
 import SectionTitle from "../components/SectionTitle"
+import Container from "../components/Container"
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", });
@@ -22,7 +23,7 @@ const Contact = () => {
 
   
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <Container>
       <SectionTitle
         title={'Contact Me'}
         subtitle={"Let's build something amazing together."}
@@ -105,7 +106,7 @@ const Contact = () => {
           Send Message
         </Button>
       </form>
-    </section>
+    </Container>
   )
 }
 
