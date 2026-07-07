@@ -12,6 +12,14 @@ const Contact = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }))
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(formData);
+    setIsSubmitted(true);
+
+    setFormData({ name: "", email: "", message: "" });
+  }
+
   
   return (
     <div>Contact</div>
