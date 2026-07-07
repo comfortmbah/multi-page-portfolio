@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import Button from "../components/Button"
+import profile from "../data/profile"
 
 const Home = () => {
   return (
@@ -12,16 +13,15 @@ const Home = () => {
           </p>
 
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
-            Sly
+            {profile.name}
           </h1>
 
           <h2 className="text-2xl font-semibold mb-6 text-gray-600">
-            Frontend React Developer
+            {profile.role}
           </h2>
 
           <p className="text-gray-500 leading-8 mb-8">
-            I'm passionate about building clean, responsive and user-friendly web applications using react and tailwind CSS. 
-            I'm currently learning full stack javascipt and building real-world projects. 
+            {profile.bio} 
           </p>
 
           <div className="flex gap-4">
@@ -52,8 +52,8 @@ const Home = () => {
 
         <div className="flex-1 flex justify-center">
           <img 
-            src={'/profile.jpg'} 
-            alt="Sly" 
+            src={profile.image} 
+            alt={profile.name}
             className="w-80 h-80 rounded-full shadow-lg object-cover"
           />
         </div>

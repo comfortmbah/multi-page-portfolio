@@ -1,4 +1,5 @@
 import SectionTitle from "../components/SectionTitle"
+import profile from "../data/profile"
 
 const About = () => {
   return (
@@ -12,20 +13,19 @@ const About = () => {
 
         <div className="flex-1 flex justify-center">
           <img 
-            src="/profile.jpg" 
-            alt="Sly" 
+            src={profile.image} 
+            alt={profile.name} 
             className="w-80 h-80 rounded-lg object-cover shadow-lg"
           />
         </div>
 
         <div className="flex-1">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-            Frontend React Developer
+            {profile.role}
           </h3>
 
           <p className="text-gray-600 mb-4 leading-8">
-            Hi, I'm Sly, a passionate Frontend Developer currently learning Full stack Javascript.
-            I enjoy building modern, responsive, and user-friendly web applications with react and tailwind CSS.
+            {profile.bio}
           </p>
 
           <p className="text-gray-600 leading-8">
