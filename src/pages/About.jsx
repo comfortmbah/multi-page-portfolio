@@ -1,9 +1,10 @@
 import SectionTitle from "../components/SectionTitle"
 import profile from "../data/profile"
+import Container from "../components/Container"
 
 const About = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <Container>
       <SectionTitle
         title={'About me'}
         subtitle={'Get to know me better'}
@@ -33,7 +34,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </section>
+    </Container>
   )
 }
 
