@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom"
+import navLinks from "../data/navLinks";
+
 
 const Navbar = () => {
   
@@ -12,25 +14,16 @@ const Navbar = () => {
             </h1>
 
             <ul className="flex font-medium gap-7">
-                <li>
-                    <NavLink to={'/'} className={linkClass}>Home</NavLink>
-                </li>
-
-                <li>
-                    <NavLink to={'/about'} className={linkClass}>About</NavLink>
-                </li>
-
-                <li>
-                    <NavLink to={'/skills'} className={linkClass}>Skills</NavLink>
-                </li>
-
-                <li>
-                    <NavLink to={'/projects'} className={linkClass}>Projects</NavLink>
-                </li>
-
-                <li>
-                    <NavLink to={'/contact'} className={linkClass}>Contact</NavLink>
-                </li>
+                {navLinks.map((link) => (
+                    <li key={link.id}>
+                        <NavLink
+                          to={link.path}
+                          className={linkClass}
+                        >
+                            {link.name}
+                        </NavLink>
+                    </li>
+                ))}
             </ul>
         </nav>
     </header>
