@@ -1,8 +1,11 @@
 import SectionTitle from "../components/SectionTitle"
-import profile from "../data/profile"
 import Container from "../components/Container"
+import { useContext } from "react"
+import { ProfileContext } from "../context/ProfileContext"
 
 const About = () => {
+  const profile = useContext(ProfileContext);
+  
   return (
     <Container>
       <SectionTitle
