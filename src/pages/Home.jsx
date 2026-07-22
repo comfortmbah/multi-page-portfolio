@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom"
 import Button from "../components/Button"
-import profile from "../data/profile"
+import { useContext } from "react"
+import { ProfileContext } from "../context/ProfileContext"
 
 const Home = () => {
+  const profile = useContext(ProfileContext);
+  
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
