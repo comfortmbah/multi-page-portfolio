@@ -1,11 +1,17 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Button from "../components/Button"
 import SectionTitle from "../components/SectionTitle"
 import Container from "../components/Container"
 
 const Contact = () => {
+  const nameInputRef = useRef(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "", });
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+  useEffect(() => {
+    nameInputRef.current.focus();
+  }, []);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -49,6 +55,7 @@ const Contact = () => {
 
           <input 
             type="text" 
+            ref={nameInputRef}
             id="name"
             name="name"
             value={formData.name}
